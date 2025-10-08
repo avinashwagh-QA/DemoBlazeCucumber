@@ -5,6 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class HomePage extends BasePage {
 
     public HomePage(WebDriver driver) {
@@ -18,16 +21,8 @@ public class HomePage extends BasePage {
     @FindBy(id = "login2")
     WebElement linkLogin;
 
-    //Element for UserName
-    @FindBy(xpath = "//input[@id='loginusername']")
-    WebElement txtUserName;
-
-    //Element for Password
-    @FindBy(xpath = "//input[@id='loginpassword']")
-    WebElement txtPassword;
-
-    @FindBy(xpath = "//button[normalize-space()='Log in']")
-    WebElement btnLogin;
+    @FindBy(xpath = "//div[@id='logInModal']//div[@class='modal-content']")
+    WebElement loginModal;
 
     @FindBy(xpath = "//a[@id='nameofuser']")
     WebElement welcomeMsg;
@@ -36,49 +31,77 @@ public class HomePage extends BasePage {
     WebElement linkLogout;
 
 
-public void pageLoadedLogoDisplayed ( )
-{
-    waitHelper.waitForElementVisible(logo);
-    boolean lg= logo.isDisplayed();
-    BaseClass.getLogger().info("The Page is loaded completely and Logo is displayed " + lg);
-}
+    @FindBy(xpath ="//div[@class='card-block']//h4[@class='card-title']//a")
+    List <WebElement> productTitle;  // All the product tile from current page
 
+
+
+    public void pageLoadedLogoDisplayed() {
+        waitHelper.waitForElementVisible(logo);
+        boolean lg = logo.isDisplayed();
+        BaseClass.getLogger().info("The Page is loaded completely and Logo is displayed " + lg);
+    }
 
     //Method to Open login modal
     public void openLoginModal() {
+        // Check if modal is already displayed
+        if (loginModal.isDisplayed()) {
+            BaseClass.getLogger().info("Login modal already open, skipping click");
+            return; // do not click navbar link
+        }
         if (linkLogin != null) {
             waitHelper.waitForElementTOClick(linkLogin);
             linkLogin.click();
+            waitHelper.waitForElementVisible(loginModal);
         } else {
             BaseClass.getLogger().info("Link to login not found");
         }
 
     }
 
-    //Methods for set Username and Password
-    public void setTxtUserName(String userName) {
-        waitHelper.waitForElementVisible(txtUserName);
-        txtUserName.sendKeys(userName);
-    }
-
-    public void setTxtPassword(String password) {
-        waitHelper.waitForElementVisible(txtPassword);
-        txtPassword.sendKeys(password);
-    }
-
-    public void clickOnLoginBtn() {
-        btnLogin.click();
-    }
-
-    public String getWelcomeMsg ()
-    {
+    public String getWelcomeMsg() {
         waitHelper.waitForElementVisible(welcomeMsg);
         return welcomeMsg.getText();
     }
 
-    public void setLinkLogout(){
+    public void setLinkLogout() {
         waitHelper.waitForElementVisible(linkLogout);
         linkLogout.click();
     }
+
+    public int getTotalProductCount() {
+        waitHelper.waitForElementsToVisible(productTitle);
+        return productTitle.size();
+    }
+
+    public List<String> getAllproductNames() {
+        waitHelper.waitForElementsToVisible(productTitle);
+
+        List<String> names = new ArrayList<>();
+        for (WebElement p : productTitle) {
+            names.add(p.getText());
+        }
+        return names;
+    }
+
+    public boolean clickProductbyName(String productName) {
+        waitHelper.waitForElementsToVisible(productTitle);
+        boolean found = false;
+
+        for (WebElement product : productTitle) {
+            if (product.getText().equalsIgnoreCase(productName)) {
+                waitHelper.waitForElementTOClick(product);
+                product.click();
+                found = true;
+                break;
+            }
+        }
+        return found;
+    }
+
+
+
+
+
 
 }

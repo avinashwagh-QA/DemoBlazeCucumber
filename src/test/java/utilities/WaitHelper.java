@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.List;
 
 public class WaitHelper {
 
@@ -23,13 +24,21 @@ public class WaitHelper {
         return wait.until(ExpectedConditions.visibilityOf(element));
     }
 
+    /* Method for multiple element to visible */
+    public void waitForElementsToVisible(List <WebElement> elements){
+        WebDriverWait Wait = new WebDriverWait(driver, Duration.ofSeconds(default_Time));
+         for (WebElement element : elements){
+             Wait.until(ExpectedConditions.visibilityOf(element));
+         }
+    }
+
     /* Method for element to be clickable */
     public WebElement waitForElementTOClick(WebElement element) {
         try {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(default_Time));
             return wait.until(ExpectedConditions.elementToBeClickable(element));
         } catch (Exception e) {
-            BaseClass.getLogger().info ("Timeout Waiting for element :"+ element.toString());
+            BaseClass.getLogger().info("Timeout Waiting for element :"+ element.toString());
             return null;
         }
     }
@@ -40,4 +49,8 @@ public class WaitHelper {
         return wait.until(ExpectedConditions.titleContains(titlePart));
     }
 
+    public void waitForAlerttoBePresent(){
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(default_Time));
+        wait.until(ExpectedConditions.alertIsPresent());
+    }
 }
