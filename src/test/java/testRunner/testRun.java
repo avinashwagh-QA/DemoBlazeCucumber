@@ -8,12 +8,13 @@ import io.cucumber.junit.CucumberOptions;
 @SuppressWarnings("deprecation")
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features= {"src/test/resources/features"},
+        //features= {"src/test/resources/features"},
         //features= {"src/test/resources/features/login.feature"},
         //features = {"src/test/resources/features/AllProduct.feature"},
+        features = {"src/test/resources/features/AddToCart.feature"},
 
 
-        glue={"stepDefinations","hooks"},
+        glue={"stepDefinitions","hooks"},
         plugin= {
                 "pretty", "html:reports/myreport.html",
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",

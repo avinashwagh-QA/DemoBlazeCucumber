@@ -53,4 +53,10 @@ public class WaitHelper {
         WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(default_Time));
         wait.until(ExpectedConditions.alertIsPresent());
     }
+
+
+    public void WaitForElementNotVisible(WebElement element){
+        WebDriverWait wait= new WebDriverWait(driver, Duration.ofSeconds(default_Time));
+        wait.until(ExpectedConditions.invisibilityOf(element));
+    }
 }

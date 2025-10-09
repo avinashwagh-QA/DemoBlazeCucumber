@@ -1,4 +1,4 @@
-package stepDefinations;
+package stepDefinitions;
 
 import factory.BaseClass;
 import factory.DriverProvider;
@@ -9,7 +9,6 @@ import pageObjects.HomePage;
 import pageObjects.LoginPage;
 
 import javax.inject.Inject;
-import java.awt.*;
 import java.io.IOException;
 
 public class LoginSteps {
