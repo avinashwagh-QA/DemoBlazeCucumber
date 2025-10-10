@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.Collection;
+import java.util.HashSet;
 import java.util.List;
 
 public class CartPage extends BasePage {
@@ -134,6 +136,44 @@ public class CartPage extends BasePage {
         }
         return true; // product successfully removed
     }
+
+
+    public boolean areProductPresent(Collection<String> productNames) {
+
+        waitHelper.waitForElementVisible(productTable);
+        // Total numbers of raws
+        int rows = driver.findElements(By.xpath("//table[contains(@class,'table table-bordered table-hover table-striped')]//tr")).size();
+
+        HashSet <String> productsToCheck = new HashSet<>(productNames); //creating Has set for list of  product to be check
+        HashSet <String> foundProducts = new HashSet<>(); //Creating Has set if the products found
+
+        for (int r = 1; r < rows; r++) {
+            try {
+
+                String name1 = driver.findElement(By.xpath("//table[contains(@class,'table table-bordered table-hover table-striped')]//tr[" + r + "]//td[2]")).getText();
+
+                if (productsToCheck.contains(name1)) {
+                    foundProducts.add(name1); // add product to list
+                    BaseClass.getLogger().info("Product found in the row {}{}", r, name1);
+                    return true;
+                }
+            }catch (Exception e){
+            BaseClass.getLogger().info(e.getMessage());}
+        }
+
+        productsToCheck.removeAll(foundProducts);
+        if(!productsToCheck.isEmpty()){
+            BaseClass.getLogger().info("Products not found in cart{}", productsToCheck);
+            return false;
+        }
+
+        return true; //All products found
+
+    }
+
+
+
+
 
 
 }

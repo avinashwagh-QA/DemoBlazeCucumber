@@ -48,6 +48,22 @@ Feature: Add to Cart functionality
       And Success message should be displayed on the page "Product added"
       Then The user deletes the product "Sony xperia z5" from the cart and it should be removed
 
+      Scenario: Verify the user can add multiple product to cart and Total price is updated
+        When The user click on the product "Samsung galaxy s7"
+        And Product detail page should be displayed "Samsung galaxy s7"
+        And Click on the add to cart button
+        And Success message should be displayed on the page "Product added"
+        And User navigates to Home Page
+        And The user click on the product "Iphone 6 32gb"
+        And Product detail page should be displayed "Iphone 6 32gb"
+        And Click on the add to cart button
+        And Success message should be displayed on the page "Product added"
+        Then Cart should be displayed both "Samsung galaxy s7" and "Iphone 6 32gb"
+        And The total price in the cart should be equal to the both product price
 
 
 
+
+
+
+`

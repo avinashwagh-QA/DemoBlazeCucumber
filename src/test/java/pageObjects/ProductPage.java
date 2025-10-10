@@ -11,24 +11,32 @@ public class ProductPage extends BasePage{
         super(driver);
     }
 
+    // Element for product name
     @FindBy(css = ".name")
     WebElement productNameLabel;
 
+    //Element for Add to cart Button
     @FindBy(xpath = "//a[normalize-space()='Add to cart']")
     WebElement btnAddToCart;
 
+    //Element for Home tab from product page
+    @FindBy(xpath = "//li[@class='nav-item active']//a[@class='nav-link']")
+    WebElement lnkHome;
 
+    // Method for to get product name
     public String getProductLabel ()
     {
         waitHelper.waitForElementVisible(productNameLabel);
         return productNameLabel.getText();
     }
 
+    // Method for add to cart button
     public void clickOnAddToCart (){
         waitHelper.waitForElementTOClick(btnAddToCart);
         btnAddToCart.click();
     }
 
+    // To verify Product added from product page
     public String productCartSuccessMsg (){
         try {
             waitHelper.waitForAlerttoBePresent();
@@ -44,6 +52,11 @@ public class ProductPage extends BasePage{
             return null;
         }
 
+    }
+
+    // Navigate to Home
+    public void navigateToHome(){
+        lnkHome.click();
     }
 
 

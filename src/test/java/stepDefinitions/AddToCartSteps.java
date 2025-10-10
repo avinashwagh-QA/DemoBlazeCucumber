@@ -7,6 +7,8 @@ import org.openqa.selenium.WebDriver;
 import pageObjects.CartPage;
 import pageObjects.ProductPage;
 
+import java.util.Arrays;
+
 public class AddToCartSteps {
 
     private final WebDriver driver;
@@ -67,5 +69,22 @@ public class AddToCartSteps {
         boolean act_product = cp.isProductRemoved(productName);
         Assert.assertTrue("Product not removed" + productName, act_product);
 
+    }
+
+    @And("User navigates to Home Page")
+    public void userNavigatesToHomePage() {
+        prp.navigateToHome();
+    }
+
+    @Then("Cart should be displayed both {string} and {string}")
+    public void cartShouldBeDisplayedBothAnd(String productName1, String productName2) {
+        cp = new CartPage(driver);
+        cp.areProductPresent(Arrays.asList(productName1,productName2));
+
+
+    }
+
+    @And("The total price in the cart should be equal to the both product price")
+    public void theTotalPriceInTheCartShouldBeEqualToTheBothProductPrice() {
     }
 }
