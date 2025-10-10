@@ -43,22 +43,29 @@ public class AddToCartSteps {
 
     @And("The price of the product {string} in the cart should be {string}")
     public void thePriceOfTheProductInTheCartShouldBe(String productName, String productPrice) {
-
-        boolean prdprice =cp.isProductPriceCorrect(productName,productPrice);
-        Assert.assertTrue(prdprice);
+        cp = new CartPage(driver);
+        cp.clickOnCartPage();
+        boolean prd_price =cp.isProductPriceCorrect(productName,productPrice);
+        Assert.assertTrue(prd_price);
 
     }
 
     @And("The total price in the cart should be equal to the product price {string}")
     public void theTotalPriceInTheCartShouldBeEqualToTheProductPrice(String expectedTotalPrice) {
-    String actualTotalPrice = cp.isTotalPriceCorrect();
-    Assert.assertEquals("Price Does not match",expectedTotalPrice,actualTotalPrice);
+
+        String actualTotalPrice = cp.isTotalPriceCorrect();
+        Assert.assertEquals("Price Does not match", expectedTotalPrice, actualTotalPrice);
 
     }
 
     @Then("The user deletes the product {string} from the cart and it should be removed")
     public void theUserDeletesTheProductFromTheCartAndItShouldBeRemoved(String productName) {
 
+        cp = new CartPage(driver);
+        cp.clickOnCartPage();
+
+        boolean act_product = cp.isProductRemoved(productName);
+        Assert.assertTrue("Product not removed" + productName, act_product);
 
     }
 }

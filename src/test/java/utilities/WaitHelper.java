@@ -1,6 +1,8 @@
 package utilities;
 
 import factory.BaseClass;
+import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -55,8 +57,26 @@ public class WaitHelper {
     }
 
 
-    public void WaitForElementNotVisible(WebElement element){
-        WebDriverWait wait= new WebDriverWait(driver, Duration.ofSeconds(default_Time));
-        wait.until(ExpectedConditions.invisibilityOf(element));
+    public void waitForTextToDisappear(WebElement productTable, String text) {
+        try {
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+            wait.until(ExpectedConditions.invisibilityOfElementLocated(
+                    By.xpath("//*[contains(text(),'" + text + "')]")));
+        } catch (TimeoutException e) {
+            BaseClass.getLogger().info("Timeout waiting for text to disappear: " + text);
+        }
     }
+
+
+    public void waitForElementToDisappear(WebElement element) {
+        try {
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+            wait.until(ExpectedConditions.stalenessOf(element)); // waits until element is removed from DOM
+        } catch (TimeoutException e) {
+            BaseClass.getLogger().info("Timeout waiting for element to disappear: " + element);
+        }
+    }
+
+
 }
+

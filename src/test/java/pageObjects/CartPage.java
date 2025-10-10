@@ -14,7 +14,7 @@ public class CartPage extends BasePage {
     }
 
     //link for cart
-    @FindBy(xpath = "//a[@id='cartur']")
+    @FindBy(xpath = "//a[@class='nav-link' and contains(text(),'Cart')]")
     WebElement lnkCart;
 
     //Product table
@@ -84,35 +84,58 @@ public class CartPage extends BasePage {
     }
 
 
-public boolean isProductRemoved (String prpductName) {
-    waitHelper.waitForElementVisible(productTable);
+    public boolean isProductRemoved(String productName) {
 
-    int totalPage = 1;
-    List <WebElement> web = driver.findElements(By.xpath("//table[contains(@class,'table table-bordered table-hover table-striped')]//tr"));
-    String rows = web.size();
+        waitHelper.waitForElementVisible(productTable); //wait for the cart table to visible
 
+        // Element for total number of rows
+        List<WebElement> rows = driver.findElements(By.xpath("//table[contains(@class,'table table-bordered table-hover table-striped')]//tr"));
 
-    for (int r =1; r< rows; r++) {
-        String name = driver.findElement(By.xpath("//table[contains(@class,'table table-bordered table-hover table-striped')]//tr[" + r + "]//td[2]")).getText();
+        // Loop through all the products and find the product
+        for (WebElement row : rows) {
 
-        if(name.equalsIgnoreCase(prpductName)){
+            List<WebElement> cols = row.findElements(By.tagName("td"));
 
-            driver.findElement(By.xpath("//table[contains(@class,'table table-bordered table-hover table-striped')]//tr[" + r + "]//td[3]")).click();
+            if (cols.size() < 4) {
+                continue;
+            }
 
-            waitHelper.WaitForElementNotVisible(name);
+            String name = cols.get(1).getText().trim();
 
+            if (name.equalsIgnoreCase(productName)) {
+
+                // Click on the delete button from row 3
+                WebElement deleteBtn = cols.get(3).findElement(By.tagName("a"));
+
+                    deleteBtn.click();
+                    waitHelper.waitForTextToDisappear(productTable, productName);
+                    break;
+
+            }
         }
 
+        // Element for total number of rows
+        List<WebElement> updatedRows = driver.findElements(By.xpath("//table[contains(@class,'table table-bordered table-hover table-striped')]//tr"));
 
+        // verify the product removed from the table
+        for (WebElement row : updatedRows) {
+
+            List<WebElement> cols = row.findElements(By.tagName("td"));
+
+            if (cols.size() < 4) {
+                continue;
+            }
+
+            String pr2_name = cols.get(1).getText().trim();
+
+            if (pr2_name.equalsIgnoreCase(productName)) {
+                return false; // product still remains
+            }
+        }
+        return true; // product successfully removed
+    }
 
 
 }
 
-
-
-
-
-
-
-}
 

@@ -30,7 +30,7 @@ Feature: Add to Cart functionality
       And Click on the add to cart button
       And Success message should be displayed on the page "Product added"
       Then The product "Sony xperia z5" should be successfully added to the cart
-      And The price of the product "Sony xperia z5" in the cart should be "$320"
+      And The price of the product "Sony xperia z5" in the cart should be "320"
 
 
     Scenario: Verify Total price for single product is same as product price
@@ -38,8 +38,8 @@ Feature: Add to Cart functionality
       And Product detail page should be displayed "Sony xperia z5"
       And Click on the add to cart button
       And Success message should be displayed on the page "Product added"
-      And The price of the product "Sony xperia z5" in the cart should be "$320"
-      And The total price in the cart should be equal to the product price "$320"
+      And The price of the product "Sony xperia z5" in the cart should be "320"
+      And The total price in the cart should be equal to the product price "320"
 
     Scenario: Verify user can remove single product from the cart
       When The user click on the product "Sony xperia z5"
