@@ -5,13 +5,14 @@ import org.junit.runner.RunWith;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
-@SuppressWarnings("deprecation")
+
 @RunWith(Cucumber.class)
 @CucumberOptions(
         //features= {"src/test/resources/features"},
         //features= {"src/test/resources/features/login.feature"},
         //features = {"src/test/resources/features/AllProduct.feature"},
-        features = {"src/test/resources/features/AddToCart.feature"},
+        //features = {"src/test/resources/features/AddToCart.feature"},
+        features = {"src/test/resources/features/CheckOut.feature"},
 
 
         glue={"stepDefinitions","hooks"},
@@ -24,8 +25,8 @@ import io.cucumber.junit.CucumberOptions;
 
         dryRun=false,    // checks mapping between scenario steps and step definition methods
         monochrome=true,    // to avoid junk characters in output
-        publish=false   // to publish report in cucumber server
-        //tags="@Sanity"  // this will execute scenarios tagged with @sanity
+        publish=false,   // to publish report in cucumber server
+        tags="@Sanity"  // this will execute scenarios tagged with @sanity
         //tags="@Regression"
         //tags="@Sanity and @Regression" //Scenarios tagged with both @sanity and @regression
         //tags="@Sanity and not @Regression" //Scenarios tagged with @sanity but not tagged with @regression

@@ -3,8 +3,7 @@ Feature: Add to Cart functionality
   Background:
     Given The user navigates to application URL and logo is displayed
 
-
-
+@Smoke
   Scenario: Verify Product added to cart Successfully without login
     When The user click on the product "Sony xperia z5"
     And Product detail page should be displayed "Sony xperia z5"
@@ -12,7 +11,7 @@ Feature: Add to Cart functionality
     And Success message should be displayed on the page "Product added"
     Then The product "Sony xperia z5" should be successfully added to the cart
 
-
+@Smoke
   Scenario: Verify product can be added after successfully login
     Given The user click on Login from Navbar
     When The user enter valid User name as "David02" and Password as "David@123" in the modal
@@ -24,46 +23,71 @@ Feature: Add to Cart functionality
     Then The product "Samsung galaxy s6" should be successfully added to the cart
 
 
-    Scenario: Verify product name and price are displayed correctly on cart page for single product
-      When The user click on the product "Sony xperia z5"
-      And Product detail page should be displayed "Sony xperia z5"
-      And Click on the add to cart button
-      And Success message should be displayed on the page "Product added"
-      Then The product "Sony xperia z5" should be successfully added to the cart
-      And The price of the product "Sony xperia z5" in the cart should be "320"
+  @Regression
+  Scenario: Verify product name and price are displayed correctly on cart page for single product
+    When The user click on the product "Sony xperia z5"
+    And Product detail page should be displayed "Sony xperia z5"
+    And Click on the add to cart button
+    And Success message should be displayed on the page "Product added"
+    Then The product "Sony xperia z5" should be successfully added to the cart
+    And The price of the product "Sony xperia z5" in the cart should be "320"
+
+  @Regression
+  Scenario Outline: Verify the product details and price in the cart for multiple products
+    When The user click on the product "<Product Name>"
+    And Product detail page should be displayed "<Product Name>"
+    And Click on the add to cart button
+    And Success message should be displayed on the page "Product added"
+    Then The product "<Product Name>" should be successfully added to the cart
+    And The price of the product "<Product Name>" in the cart should be "<Price>"
+
+    Examples:
+      | Product Name      | Price |
+      | Sony xperia z5    | 320   |
+      | Samsung galaxy s7 | 800   |
 
 
-    Scenario: Verify Total price for single product is same as product price
-      When The user click on the product "Sony xperia z5"
-      And Product detail page should be displayed "Sony xperia z5"
-      And Click on the add to cart button
-      And Success message should be displayed on the page "Product added"
-      And The price of the product "Sony xperia z5" in the cart should be "320"
-      And The total price in the cart should be equal to the product price "320"
+  @Regression
+ Scenario: Verify Total price for single product is same as product price
+    When The user click on the product "Sony xperia z5"
+    And Product detail page should be displayed "Sony xperia z5"
+    And Click on the add to cart button
+    And Success message should be displayed on the page "Product added"
+    And The price of the product "Sony xperia z5" in the cart should be "320"
+    And The total price in the cart should be equal to the product price "320"
 
-    Scenario: Verify user can remove single product from the cart
-      When The user click on the product "Sony xperia z5"
-      And Product detail page should be displayed "Sony xperia z5"
-      And Click on the add to cart button
-      And Success message should be displayed on the page "Product added"
-      Then The user deletes the product "Sony xperia z5" from the cart and it should be removed
+  @Smoke
+  Scenario: Verify user can remove single product from the cart
+    When The user click on the product "Sony xperia z5"
+    And Product detail page should be displayed "Sony xperia z5"
+    And Click on the add to cart button
+    And Success message should be displayed on the page "Product added"
+    Then The user deletes the product "Sony xperia z5" from the cart and it should be removed
 
-      Scenario: Verify the user can add multiple product to cart and Total price is updated
-        When The user click on the product "Samsung galaxy s7"
-        And Product detail page should be displayed "Samsung galaxy s7"
-        And Click on the add to cart button
-        And Success message should be displayed on the page "Product added"
-        And User navigates to Home Page
-        And The user click on the product "Iphone 6 32gb"
-        And Product detail page should be displayed "Iphone 6 32gb"
-        And Click on the add to cart button
-        And Success message should be displayed on the page "Product added"
-        Then Cart should be displayed both "Samsung galaxy s7" and "Iphone 6 32gb"
-        And The total price in the cart should be equal to the both product price
+  @Smoke
+  Scenario: Verify the user can add multiple product to cart and Total price is updated
+    When The user click on the product "Samsung galaxy s7"
+    And Product detail page should be displayed "Samsung galaxy s7"
+    And Click on the add to cart button
+    And Success message should be displayed on the page "Product added"
+    And User navigates to Home Page
+    And The user click on the product "Iphone 6 32gb"
+    And Product detail page should be displayed "Iphone 6 32gb"
+    And Click on the add to cart button
+    And Success message should be displayed on the page "Product added"
+    Then Cart should be displayed both "Samsung galaxy s7" and "Iphone 6 32gb"
+    And The total price in the cart should be equal to the both product price
+
+  @Sanity
+  Scenario: Verify the user can add multiple product to cart and total price is correct
+    When The user adds the following products to cart
+        | Product Name      | Price |
+        | Sony xperia z5    | 320   |
+        | Samsung galaxy s7 | 800   |
+    Then User navigates to Cart Page then Cart should be displayed all the product
+      | Product Name      |
+      | Sony xperia z5    |
+      | Samsung galaxy s7 |
+    And The total price in the cart should be equal to the "1120"
 
 
-
-
-
-
-`

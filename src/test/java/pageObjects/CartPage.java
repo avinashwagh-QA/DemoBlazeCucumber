@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import utilities.WaitHelper;
 
 import java.util.Collection;
 import java.util.HashSet;
@@ -26,6 +27,9 @@ public class CartPage extends BasePage {
     //Total price
     @FindBy(xpath = "//h3[@id='totalp']")
     WebElement totalPrice;
+
+    @FindBy(xpath = "//button[normalize-space()='Place Order']")
+    WebElement btnPlaceOrder;
 
     public void clickOnCartPage() {
         waitHelper.waitForElementVisible(lnkCart);
@@ -61,7 +65,6 @@ public class CartPage extends BasePage {
     {
         waitHelper.waitForElementVisible(productTable);
 
-        int totalPage = 1;
         int rows = driver.findElements(By.xpath("//table[contains(@class,'table table-bordered table-hover table-striped')]//tr")).size();
 
         for (int r =1; r< rows; r++) {
@@ -169,6 +172,41 @@ public class CartPage extends BasePage {
 
         return true; //All products found
 
+    }
+
+
+    public boolean areTotalPriceEqualProductPrice (){
+
+        waitHelper.waitForElementVisible(productTable);
+
+        String tp =totalPrice.getText();
+        int total =Integer.parseInt(tp);
+        int productSum =0;
+
+        List <WebElement> rows = driver.findElements(By.xpath("//table[contains(@class,'table table-bordered table-hover table-striped')]//tr"));
+
+        for(int r=1; r< rows.size();r++){
+
+            List<WebElement> cols = rows.get(r).findElements(By.tagName("td"));
+
+            if(cols.size()<3) continue;
+
+            String priceStr = cols.get(2).getText();
+            if (!priceStr.isEmpty())
+            {
+                productSum += Integer.parseInt(priceStr);
+            }
+        }
+        return productSum == total;
+    }
+
+    public int getTotalPrice(){
+      return   Integer.parseInt(totalPrice.getText());
+    }
+
+    public void clickOnPlaceOrder(){
+        waitHelper.waitForElementTOClick(btnPlaceOrder);
+        btnPlaceOrder.click();
     }
 
 
