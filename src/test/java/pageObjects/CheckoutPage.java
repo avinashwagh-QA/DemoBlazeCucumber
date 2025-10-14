@@ -1,8 +1,13 @@
 package pageObjects;
 
+import factory.BaseClass;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class CheckoutPage extends BasePage{
     public CheckoutPage(WebDriver driver) {
@@ -37,6 +42,8 @@ public class CheckoutPage extends BasePage{
 
     @FindBy(xpath = "//div[contains(@class,'sweet-alert')]//*[contains(text(),'Thank you for your purchase!')]")
     WebElement successCheckOutMsg;
+
+
 
 
     public void setName (String name){
@@ -76,11 +83,30 @@ public class CheckoutPage extends BasePage{
     public String successCheckoutMsg(){
         waitHelper.waitForElementVisible(successCheckOutMsg);
         return successCheckOutMsg.getText();
-
     }
 
+    public Map<String, String> getOrderDetails() {
+        BaseClass.getLogger().info("Checking order details ......");
+
+        WebElement orderDetails = driver.findElement(By.cssSelector("p.lead.text-muted"));
+        waitHelper.waitForElementVisible(orderDetails);
+
+        Map<String, String> pDetails = new HashMap<>();
+
+        String allDetails = orderDetails.getText();
+        String[] lines = allDetails.split("\\r?\\n");
 
 
+        for (String line : lines) {
+            if (line.contains(":")) {
+                String[] parts = line.split(":", 2);
+                String key = parts[0].trim();
+                String value = parts[1].trim();
+                pDetails.put(key, value);
+            }
+        }
+        return pDetails;
+    }
 
 
 }

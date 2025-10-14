@@ -3,7 +3,7 @@ Feature: Checkout flow Verification
   Background:
     Given The user navigates to application URL and logo is displayed
 
-
+    @Sanity
     Scenario: Verify use can check out Successfully from cart page
       Given The user adds the following products to cart
         | Product Name      | Price |
@@ -23,12 +23,11 @@ Feature: Checkout flow Verification
         | Year        | 2025                |
       And User confirms the purchase
       Then A Confirmation message "Thank you for your purchase!" should be displayed
-      #And The Order details should include
-        #| Field       | Value               |
-       # | Amount      | 1120 USD            |
-       # | Card Number | 1234 5678 9012 3456 |
-       # | Name | John Doe  |
-       # | Date | 13/9/2025 |
+      And The Order details should include
+        | Amount      | 1120 USD            |
+        | Card Number | 1234 5678 9012 3456 |
+        | Name        | John Doe            |
+        | Date        | 14/9/2025           |
 
 
 
