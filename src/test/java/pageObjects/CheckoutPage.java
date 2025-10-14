@@ -15,6 +15,9 @@ public class CheckoutPage extends BasePage{
         super(driver);
     }
 
+    // Modal Xpath
+    @FindBy(xpath = "//div[@id='orderModal']//div[@role='document']")
+    WebElement modal;
 
     //Name
     @FindBy(xpath = "//input[@id='name']")
@@ -128,6 +131,19 @@ public class CheckoutPage extends BasePage{
         String alertTxt = alert.getText();
         alert.accept();
         return  alertTxt;
+    }
+
+    public boolean closePurchaseModal(){
+        waitHelper.waitForElementVisible(btnCloseModal);
+        waitHelper.waitForElementTOClick(btnCloseModal);
+        btnCloseModal.click();
+
+        try {
+            return waitHelper.waitForElementInvisible(modal);
+        } catch (Exception e) {
+            BaseClass.getLogger().info("Exception occurs{}", e.getMessage());
+            return false;
+        }
     }
 
 

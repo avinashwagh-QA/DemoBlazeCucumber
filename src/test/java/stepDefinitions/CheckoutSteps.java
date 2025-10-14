@@ -79,6 +79,11 @@ public class CheckoutSteps {
     }
 
 
+    @Then("User clicks on close button then modal should be closed")
+    public void userClicksOnCloseButtonThenModalShouldBeClosed() {
+        chkp = new CheckoutPage(driver);
 
-
+        boolean modalStatus = chkp.closePurchaseModal();
+    Assert.assertTrue("Modal did not closed", modalStatus);
+    }
 }

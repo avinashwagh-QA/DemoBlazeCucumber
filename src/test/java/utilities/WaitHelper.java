@@ -26,6 +26,14 @@ public class WaitHelper {
         return wait.until(ExpectedConditions.visibilityOf(element));
     }
 
+    /* Method for element to be invisible */
+    public Boolean waitForElementInvisible(WebElement element) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(default_Time));
+        return wait.until(ExpectedConditions.invisibilityOf(element));
+    }
+
+
+
     /* Method for multiple element to visible */
     public void waitForElementsToVisible(List <WebElement> elements){
         WebDriverWait Wait = new WebDriverWait(driver, Duration.ofSeconds(default_Time));

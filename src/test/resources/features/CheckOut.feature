@@ -35,9 +35,21 @@ Feature: Checkout flow Verification
       When The user click on the product "Sony xperia z5"
       And Product detail page should be displayed "Sony xperia z5"
       And Click on the add to cart button
+      And Success message should be displayed on the page "Product added"
       And The product "Sony xperia z5" should be successfully added to the cart
       And The user click on the Place order
       And User confirms the purchase
       Then Alert should be displayed with message "Please fill out Name and Creditcard."
+
+    @Regression
+    Scenario: Verify the on the order the close button works
+      When The user click on the product "Sony xperia z5"
+      And Product detail page should be displayed "Sony xperia z5"
+      And Click on the add to cart button
+      And Success message should be displayed on the page "Product added"
+      And The product "Sony xperia z5" should be successfully added to the cart
+      And The user click on the Place order
+      Then User clicks on close button then modal should be closed
+
 
 
