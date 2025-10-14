@@ -1,6 +1,7 @@
 package pageObjects;
 
 import factory.BaseClass;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -43,7 +44,11 @@ public class CheckoutPage extends BasePage{
     @FindBy(xpath = "//div[contains(@class,'sweet-alert')]//*[contains(text(),'Thank you for your purchase!')]")
     WebElement successCheckOutMsg;
 
+    @FindBy(xpath = "//button[normalize-space()='OK']")
+    WebElement btnOk;
 
+    @FindBy(xpath = "//a[@class='navbar-brand' and contains(text(),'PRODUCT STORE')]")
+    WebElement pageTittle;
 
 
     public void setName (String name){
@@ -106,6 +111,23 @@ public class CheckoutPage extends BasePage{
             }
         }
         return pDetails;
+    }
+
+    public String clickOnOkButtton (){
+        waitHelper.waitForElementVisible(btnOk);
+        waitHelper.waitForElementTOClick(btnOk);
+
+        waitHelper.waitForElementVisible(pageTittle);
+        return pageTittle.getText();
+    }
+
+    public String getMessageFromAlert(){
+
+        waitHelper.waitForAlerttoBePresent();
+        Alert alert = driver.switchTo().alert();
+        String alertTxt = alert.getText();
+        alert.accept();
+        return  alertTxt;
     }
 
 

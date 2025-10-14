@@ -28,7 +28,16 @@ Feature: Checkout flow Verification
         | Card Number | 1234 5678 9012 3456 |
         | Name        | John Doe            |
         | Date        | 14/9/2025           |
+      And Clicking on ok button then user should be navigated to Home Page and title should be "PRODUCT STORE"
 
-
+    @Regression
+    Scenario: Verify when user does not enter any value then alert appears of enter details
+      When The user click on the product "Sony xperia z5"
+      And Product detail page should be displayed "Sony xperia z5"
+      And Click on the add to cart button
+      And The product "Sony xperia z5" should be successfully added to the cart
+      And The user click on the Place order
+      And User confirms the purchase
+      Then Alert should be displayed with message "Please fill out Name and Creditcard."
 
 
