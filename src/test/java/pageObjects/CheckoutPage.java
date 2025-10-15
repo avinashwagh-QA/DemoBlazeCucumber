@@ -1,6 +1,7 @@
 package pageObjects;
 
 import factory.BaseClass;
+import factory.DriverProvider;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -11,8 +12,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class CheckoutPage extends BasePage{
-    public CheckoutPage(WebDriver driver) {
-        super(driver);
+
+    public CheckoutPage(DriverProvider provider){
+        super(provider);
     }
 
     // Modal Xpath
@@ -126,7 +128,7 @@ public class CheckoutPage extends BasePage{
 
     public String getMessageFromAlert(){
 
-        waitHelper.waitForAlerttoBePresent();
+        waitHelper.waitForAlertToBePresent();
         Alert alert = driver.switchTo().alert();
         String alertTxt = alert.getText();
         alert.accept();

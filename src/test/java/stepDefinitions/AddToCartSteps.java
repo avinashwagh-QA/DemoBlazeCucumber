@@ -4,7 +4,6 @@ import factory.DriverProvider;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.*;
 import org.junit.Assert;
-import org.openqa.selenium.WebDriver;
 import pageObjects.CartPage;
 import pageObjects.CheckoutPage;
 import pageObjects.HomePage;
@@ -17,22 +16,24 @@ import java.util.stream.Collectors;
 
 public class AddToCartSteps {
 
-    private final WebDriver driver;
+    private final DriverProvider driverProvider;  // Injected DI managed driver Provider
     private ProductPage prp;
     private CartPage cp;
     HomePage hp;
     CheckoutPage chkp;
 
 
-    public AddToCartSteps(DriverProvider provider) {
-        this.driver = provider.getDriver();
+    public AddToCartSteps(DriverProvider driverProvider) {
+        this.driverProvider = driverProvider;
+        prp = new ProductPage(driverProvider);
+        cp = new CartPage(driverProvider);
+        chkp = new CheckoutPage(driverProvider);
+        hp = new HomePage(driverProvider);
     }
 
     @When("Click on the add to cart button")
     public void click_on_the_add_to_cart_button() {
-        prp = new ProductPage(driver);
         prp.clickOnAddToCart();
-
     }
 
     @And("Success message should be displayed on the page {string}")
@@ -45,7 +46,6 @@ public class AddToCartSteps {
     @Then("The product {string} should be successfully added to the cart")
     public void theProductShouldBeSuccessfullyAddedToTheCart(String productName) {
 
-        cp = new CartPage(driver);
         cp.clickOnCartPage();
         boolean prd = cp.isProductPresent(productName);
         Assert.assertTrue(prd);
@@ -53,7 +53,6 @@ public class AddToCartSteps {
 
     @And("The price of the product {string} in the cart should be {string}")
     public void thePriceOfTheProductInTheCartShouldBe(String productName, String productPrice) {
-        cp = new CartPage(driver);
         cp.clickOnCartPage();
         boolean prd_price = cp.isProductPriceCorrect(productName, productPrice);
         Assert.assertTrue(prd_price);
@@ -71,7 +70,6 @@ public class AddToCartSteps {
     @Then("The user deletes the product {string} from the cart and it should be removed")
     public void theUserDeletesTheProductFromTheCartAndItShouldBeRemoved(String productName) {
 
-        cp = new CartPage(driver);
         cp.clickOnCartPage();
 
         boolean act_product = cp.isProductRemoved(productName);
@@ -86,7 +84,7 @@ public class AddToCartSteps {
 
     @Then("Cart should be displayed both {string} and {string}")
     public void cartShouldBeDisplayedBothAnd(String productName1, String productName2) {
-        cp = new CartPage(driver);
+
         cp.clickOnCartPage();
         boolean arePresent = cp.areProductPresent(Arrays.asList(productName1, productName2));
         Assert.assertTrue("Not all product are peresent in the cart", arePresent);
@@ -94,7 +92,7 @@ public class AddToCartSteps {
 
     @And("The total price in the cart should be equal to the both product price")
     public void theTotalPriceInTheCartShouldBeEqualToTheBothProductPrice() {
-        cp = new CartPage(driver);
+
         boolean totalPriceCorrect = cp.areTotalPriceEqualProductPrice();
         Assert.assertTrue("The Total product price are not equal", totalPriceCorrect);
     }
@@ -110,10 +108,7 @@ public class AddToCartSteps {
 
             // Reading product from map
             String name = product.get("Product Name");
-            hp = new HomePage(driver);
-
             hp.clickProductbyName(name); // Clicking on product by finding its name
-            prp = new ProductPage(driver);
             prp.clickOnAddToCart(); // Click on add to cart button
 
             prp.productCartSuccessMsg(); // getting the message fron alert
@@ -124,11 +119,8 @@ public class AddToCartSteps {
 
     @Then("User navigates to Cart Page then Cart should be displayed all the product")
     public void theCartShouldBeDisplayedAllTheProduct(DataTable expectedtable) {
-        cp = new CartPage(driver);
         cp.clickOnCartPage();
-        List<String> expectedProducts = (List<String>) expectedtable.asMaps().stream()
-                .map(row -> row.get("Product Name"))
-                .collect(Collectors.toList());
+        List<String> expectedProducts = (List<String>) expectedtable.asMaps().stream().map(row -> row.get("Product Name")).collect(Collectors.toList());
         Assert.assertTrue(cp.areProductPresent(expectedProducts));
     }
 
@@ -142,13 +134,11 @@ public class AddToCartSteps {
 
     @And("The user click on the Place order")
     public void theUserClickOnThePlaceOrder() {
-        cp = new CartPage(driver);
         cp.clickOnPlaceOrder();
     }
 
     @And("User confirms the purchase")
     public void userConfirmsThePurchase() {
-        chkp = new CheckoutPage(driver);
         chkp.clickOnPurchase();
     }
 

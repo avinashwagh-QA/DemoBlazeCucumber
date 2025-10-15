@@ -1,5 +1,6 @@
 package pageObjects;
 
+import factory.DriverProvider;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import utilities.WaitHelper;
@@ -10,9 +11,9 @@ public class BasePage {
     protected WaitHelper waitHelper;
 
 
-    public BasePage(WebDriver driver) {
-        this.driver = driver;
+    public BasePage(DriverProvider driverProvider) {
+        this.driver = driverProvider.getDriver();
         PageFactory.initElements(driver,this);
-        waitHelper = new WaitHelper(driver);
+        waitHelper = new WaitHelper(driverProvider);
     }
 }

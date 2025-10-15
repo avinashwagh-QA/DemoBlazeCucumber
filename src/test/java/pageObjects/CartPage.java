@@ -1,19 +1,19 @@
 package pageObjects;
 
 import factory.BaseClass;
+import factory.DriverProvider;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import utilities.WaitHelper;
 
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
 
 public class CartPage extends BasePage {
-    public CartPage(WebDriver driver) {
-        super(driver);
+    public CartPage(DriverProvider driverProvider) {
+        super(driverProvider);
     }
 
     //link for cart

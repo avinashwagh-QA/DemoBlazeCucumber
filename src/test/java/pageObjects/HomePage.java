@@ -1,7 +1,7 @@
 package pageObjects;
 
 import factory.BaseClass;
-import org.openqa.selenium.WebDriver;
+import factory.DriverProvider;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -10,8 +10,8 @@ import java.util.List;
 
 public class HomePage extends BasePage {
 
-    public HomePage(WebDriver driver) {
-        super(driver);
+    public HomePage(DriverProvider driverProvider) {
+        super(driverProvider);
     }
 
     @FindBy(xpath = "//a[@id='nava']//img")
@@ -30,11 +30,8 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//a[@id='logout2']")
     WebElement linkLogout;
 
-
-    @FindBy(xpath ="//div[@class='card-block']//h4[@class='card-title']//a")
-    List <WebElement> productTitle;  // All the product tile from current page
-
-
+    @FindBy(xpath = "//div[@class='card-block']//h4[@class='card-title']//a")
+    List<WebElement> productTitle;  // All the product tile from current page
 
     public void pageLoadedLogoDisplayed() {
         waitHelper.waitForElementVisible(logo);

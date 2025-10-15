@@ -5,27 +5,24 @@ import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
-import org.openqa.selenium.WebDriver;
 import pageObjects.CheckoutPage;
 
 import java.util.Map;
 
 public class CheckoutSteps {
 
-    private final WebDriver driver;
+    private final DriverProvider driverProvider;
     CheckoutPage chkp;
 
-    public CheckoutSteps (DriverProvider provider) {
-        this.driver = provider.getDriver();
+    public CheckoutSteps(DriverProvider driverProvider) {
+        this.driverProvider = driverProvider;
+        chkp = new CheckoutPage(driverProvider);
     }
 
     @And("User the user fill outs the checkout details")
     public void userTheUserFillOutsTheCheckoutDetails(DataTable detailsTable) {
 
         Map<String, String> data = detailsTable.asMap(String.class, String.class);
-
-        chkp = new CheckoutPage(driver);
-
         chkp.setName(data.get("Name"));
         chkp.setCountryName(data.get("Country"));
         chkp.setInputCity(data.get("City"));
@@ -37,11 +34,8 @@ public class CheckoutSteps {
     @Then("A Confirmation message {string} should be displayed")
     public void aConfirmationMessageShouldBeDisplayed(String expectedMessage) {
 
-        chkp = new CheckoutPage(driver);
-
         String actual = chkp.successCheckoutMsg();
         Assert.assertEquals(expectedMessage, actual);
-
     }
 
     @And("The Order details should include")
@@ -72,18 +66,15 @@ public class CheckoutSteps {
 
     @Then("Alert should be displayed with message {string}")
     public void alertShouldBeDisplayedWithMessage(String expectedAlertMsg) {
-        chkp = new CheckoutPage(driver);
 
         String actualMsg = chkp.getMessageFromAlert();
         Assert.assertEquals(expectedAlertMsg, actualMsg);
     }
 
-
     @Then("User clicks on close button then modal should be closed")
     public void userClicksOnCloseButtonThenModalShouldBeClosed() {
-        chkp = new CheckoutPage(driver);
 
         boolean modalStatus = chkp.closePurchaseModal();
-    Assert.assertTrue("Modal did not closed", modalStatus);
+        Assert.assertTrue("Modal did not closed", modalStatus);
     }
 }

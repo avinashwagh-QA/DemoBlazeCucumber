@@ -1,0 +1,1972 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title></title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary"></span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Oct 15, 2025 03:31:28 PM</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">@Negative</a><a class="dropdown-item" href="#">@Smoke</a><a class="dropdown-item" href="#">@Regression</a><a class="dropdown-item" href="#">@Sanity</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="fail" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Add to Cart functionality</p>
+            <p class="text-sm">
+              <span>3:31:29 PM</span> / <span>00:00:49:090</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Add to Cart functionality</h5>
+<span class='badge badge-success'>10.15.2025 3:31:29 PM</span>
+<span class='badge badge-danger'>10.15.2025 3:32:18 PM</span>
+<span class='badge badge-default'>00:00:49:090</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log fail-bg mr-2">Fail</span>Verify Product added to cart Successfully without login</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.the_user_navigates_to_application_url_and_logo_is_displayed()">
+                <span>Given The user navigates to application URL and logo is displayed</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductSteps.the_user_click_on_the_product(java.lang.String)">
+                <span>When The user click on the product "Sony xperia z5"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="stepDefinitions.ProductSteps.product_detail_page_should_be_displayed(java.lang.String)">
+                <span>And Product detail page should be displayed "Sony xperia z5"</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException
+	at stepDefinitions.ProductSteps.product_detail_page_should_be_displayed(ProductSteps.java:40)
+	at ✽.Product detail page should be displayed "Sony xperia z5"(file:///D:/DemoBlazeQA/DemoBlazeCucumber/src/test/resources/features/AddToCart.feature:9)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>hooks.Hooks.addscreenShot(io.cucumber.java.Scenario)</span>
+      <div>Verify Product added to cart Successfully without login
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded1.png' src="../Screenshots/embedded1.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.AddToCartSteps.click_on_the_add_to_cart_button()">
+                <span>And Click on the add to cart button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.AddToCartSteps.successMessageShouldBeDisplayedOnThePage(java.lang.String)">
+                <span>And Success message should be displayed on the page "Product added"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.AddToCartSteps.theProductShouldBeSuccessfullyAddedToTheCart(java.lang.String)">
+                <span>Then The product "Sony xperia z5" should be successfully added to the cart</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="17"><span class="badge log pass-bg mr-2">Pass</span>Verify product can be added after successfully login</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.the_user_navigates_to_application_url_and_logo_is_displayed()">
+                <span>Given The user navigates to application URL and logo is displayed</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.the_user_click_on_login_from_navbar()">
+                <span>Given The user click on Login from Navbar</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.the_user_enter_valid_user_name_as_and_password_as(java.lang.String,java.lang.String)">
+                <span>When The user enter valid User name as "David02" and Password as "David@123" in the modal</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.the_user_clicks_on_login_button()">
+                <span>And The user clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.the_user_should_be_successfully_logged_in_and_the_username_displayed_webpage()">
+                <span>And The User should be successfully logged in and the username displayed webpage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductSteps.the_user_click_on_the_product(java.lang.String)">
+                <span>And The user click on the product "Samsung galaxy s6"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AddToCartSteps.click_on_the_add_to_cart_button()">
+                <span>And Click on the add to cart button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AddToCartSteps.successMessageShouldBeDisplayedOnThePage(java.lang.String)">
+                <span>And Success message should be displayed on the page "Product added."</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AddToCartSteps.theProductShouldBeSuccessfullyAddedToTheCart(java.lang.String)">
+                <span>Then The product "Samsung galaxy s6" should be successfully added to the cart</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="38"><span class="badge log fail-bg mr-2">Fail</span>Verify product name and price are displayed correctly on cart page for single product</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.the_user_navigates_to_application_url_and_logo_is_displayed()">
+                <span>Given The user navigates to application URL and logo is displayed</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductSteps.the_user_click_on_the_product(java.lang.String)">
+                <span>When The user click on the product "Sony xperia z5"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="stepDefinitions.ProductSteps.product_detail_page_should_be_displayed(java.lang.String)">
+                <span>And Product detail page should be displayed "Sony xperia z5"</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException
+	at stepDefinitions.ProductSteps.product_detail_page_should_be_displayed(ProductSteps.java:40)
+	at ✽.Product detail page should be displayed "Sony xperia z5"(file:///D:/DemoBlazeQA/DemoBlazeCucumber/src/test/resources/features/AddToCart.feature:29)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>hooks.Hooks.addscreenShot(io.cucumber.java.Scenario)</span>
+      <div>Verify product name and price are displayed correctly on cart page for single product
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded2.png' src="../Screenshots/embedded2.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.AddToCartSteps.click_on_the_add_to_cart_button()">
+                <span>And Click on the add to cart button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.AddToCartSteps.successMessageShouldBeDisplayedOnThePage(java.lang.String)">
+                <span>And Success message should be displayed on the page "Product added"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.AddToCartSteps.theProductShouldBeSuccessfullyAddedToTheCart(java.lang.String)">
+                <span>Then The product "Sony xperia z5" should be successfully added to the cart</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.AddToCartSteps.thePriceOfTheProductInTheCartShouldBe(java.lang.String,java.lang.String)">
+                <span>And The price of the product "Sony xperia z5" in the cart should be "320"</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="55"><span class="badge log fail-bg mr-2">Fail</span>Verify the product details and price in the cart for multiple products</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="56"><span class="badge log fail-bg mr-2">Fail</span>Verify the product details and price in the cart for multiple products</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given The user navigates to application URL and logo is displayed</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When The user click on the product "Sony xperia z5"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>And Product detail page should be displayed "Sony xperia z5"</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException
+	at stepDefinitions.ProductSteps.product_detail_page_should_be_displayed(ProductSteps.java:40)
+	at ✽.Product detail page should be displayed "Sony xperia z5"(file:///D:/DemoBlazeQA/DemoBlazeCucumber/src/test/resources/features/AddToCart.feature:38)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>hooks.Hooks.addscreenShot(io.cucumber.java.Scenario)</span>
+      <div>Verify the product details and price in the cart for multiple products
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded3.png' src="../Screenshots/embedded3.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And Click on the add to cart button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And Success message should be displayed on the page "Product added"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then The product "Sony xperia z5" should be successfully added to the cart</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And The price of the product "Sony xperia z5" in the cart should be "320"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="73"><span class="badge log fail-bg mr-2">Fail</span>Verify the product details and price in the cart for multiple products</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given The user navigates to application URL and logo is displayed</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When The user click on the product "Samsung galaxy s7"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>And Product detail page should be displayed "Samsung galaxy s7"</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException
+	at stepDefinitions.ProductSteps.product_detail_page_should_be_displayed(ProductSteps.java:40)
+	at ✽.Product detail page should be displayed "Samsung galaxy s7"(file:///D:/DemoBlazeQA/DemoBlazeCucumber/src/test/resources/features/AddToCart.feature:38)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>hooks.Hooks.addscreenShot(io.cucumber.java.Scenario)</span>
+      <div>Verify the product details and price in the cart for multiple products
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded4.png' src="../Screenshots/embedded4.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And Click on the add to cart button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And Success message should be displayed on the page "Product added"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then The product "Samsung galaxy s7" should be successfully added to the cart</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And The price of the product "Samsung galaxy s7" in the cart should be "800"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="90"><span class="badge log fail-bg mr-2">Fail</span>Verify Total price for single product is same as product price</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.the_user_navigates_to_application_url_and_logo_is_displayed()">
+                <span>Given The user navigates to application URL and logo is displayed</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductSteps.the_user_click_on_the_product(java.lang.String)">
+                <span>When The user click on the product "Sony xperia z5"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="stepDefinitions.ProductSteps.product_detail_page_should_be_displayed(java.lang.String)">
+                <span>And Product detail page should be displayed "Sony xperia z5"</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException
+	at stepDefinitions.ProductSteps.product_detail_page_should_be_displayed(ProductSteps.java:40)
+	at ✽.Product detail page should be displayed "Sony xperia z5"(file:///D:/DemoBlazeQA/DemoBlazeCucumber/src/test/resources/features/AddToCart.feature:53)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>hooks.Hooks.addscreenShot(io.cucumber.java.Scenario)</span>
+      <div>Verify Total price for single product is same as product price
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded5.png' src="../Screenshots/embedded5.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.AddToCartSteps.click_on_the_add_to_cart_button()">
+                <span>And Click on the add to cart button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.AddToCartSteps.successMessageShouldBeDisplayedOnThePage(java.lang.String)">
+                <span>And Success message should be displayed on the page "Product added"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.AddToCartSteps.thePriceOfTheProductInTheCartShouldBe(java.lang.String,java.lang.String)">
+                <span>And The price of the product "Sony xperia z5" in the cart should be "320"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.AddToCartSteps.theTotalPriceInTheCartShouldBeEqualToTheProductPrice(java.lang.String)">
+                <span>And The total price in the cart should be equal to the product price "320"</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="107"><span class="badge log fail-bg mr-2">Fail</span>Verify user can remove single product from the cart</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.the_user_navigates_to_application_url_and_logo_is_displayed()">
+                <span>Given The user navigates to application URL and logo is displayed</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductSteps.the_user_click_on_the_product(java.lang.String)">
+                <span>When The user click on the product "Sony xperia z5"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="stepDefinitions.ProductSteps.product_detail_page_should_be_displayed(java.lang.String)">
+                <span>And Product detail page should be displayed "Sony xperia z5"</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException
+	at stepDefinitions.ProductSteps.product_detail_page_should_be_displayed(ProductSteps.java:40)
+	at ✽.Product detail page should be displayed "Sony xperia z5"(file:///D:/DemoBlazeQA/DemoBlazeCucumber/src/test/resources/features/AddToCart.feature:62)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>hooks.Hooks.addscreenShot(io.cucumber.java.Scenario)</span>
+      <div>Verify user can remove single product from the cart
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded6.png' src="../Screenshots/embedded6.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.AddToCartSteps.click_on_the_add_to_cart_button()">
+                <span>And Click on the add to cart button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.AddToCartSteps.successMessageShouldBeDisplayedOnThePage(java.lang.String)">
+                <span>And Success message should be displayed on the page "Product added"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.AddToCartSteps.theUserDeletesTheProductFromTheCartAndItShouldBeRemoved(java.lang.String)">
+                <span>Then The user deletes the product "Sony xperia z5" from the cart and it should be removed</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="122"><span class="badge log fail-bg mr-2">Fail</span>Verify the user can add multiple product to cart and Total price is updated</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.the_user_navigates_to_application_url_and_logo_is_displayed()">
+                <span>Given The user navigates to application URL and logo is displayed</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductSteps.the_user_click_on_the_product(java.lang.String)">
+                <span>When The user click on the product "Samsung galaxy s7"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="stepDefinitions.ProductSteps.product_detail_page_should_be_displayed(java.lang.String)">
+                <span>And Product detail page should be displayed "Samsung galaxy s7"</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException
+	at stepDefinitions.ProductSteps.product_detail_page_should_be_displayed(ProductSteps.java:40)
+	at ✽.Product detail page should be displayed "Samsung galaxy s7"(file:///D:/DemoBlazeQA/DemoBlazeCucumber/src/test/resources/features/AddToCart.feature:70)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>hooks.Hooks.addscreenShot(io.cucumber.java.Scenario)</span>
+      <div>Verify the user can add multiple product to cart and Total price is updated
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded7.png' src="../Screenshots/embedded7.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.AddToCartSteps.click_on_the_add_to_cart_button()">
+                <span>And Click on the add to cart button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.AddToCartSteps.successMessageShouldBeDisplayedOnThePage(java.lang.String)">
+                <span>And Success message should be displayed on the page "Product added"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.AddToCartSteps.userNavigatesToHomePage()">
+                <span>And User navigates to Home Page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.ProductSteps.the_user_click_on_the_product(java.lang.String)">
+                <span>And The user click on the product "Iphone 6 32gb"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.ProductSteps.product_detail_page_should_be_displayed(java.lang.String)">
+                <span>And Product detail page should be displayed "Iphone 6 32gb"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.AddToCartSteps.click_on_the_add_to_cart_button()">
+                <span>And Click on the add to cart button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.AddToCartSteps.successMessageShouldBeDisplayedOnThePage(java.lang.String)">
+                <span>And Success message should be displayed on the page "Product added"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.AddToCartSteps.cartShouldBeDisplayedBothAnd(java.lang.String,java.lang.String)">
+                <span>Then Cart should be displayed both "Samsung galaxy s7" and "Iphone 6 32gb"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.AddToCartSteps.theTotalPriceInTheCartShouldBeEqualToTheBothProductPrice()">
+                <span>And The total price in the cart should be equal to the both product price</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="149"><span class="badge log fail-bg mr-2">Fail</span>Verify the user can add multiple product to cart and total price is correct</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.the_user_navigates_to_application_url_and_logo_is_displayed()">
+                <span>Given The user navigates to application URL and logo is displayed</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="stepDefinitions.AddToCartSteps.theUserAddsTheFollowingProductsToCart(io.cucumber.datatable.DataTable)">
+                <span>When The user adds the following products to cart</span>
+      <div><table class='markup-table table '><tr><td>Product Name</td><td>Price</td></tr><tr><td>Sony xperia z5</td><td>320</td></tr><tr><td>Samsung galaxy s7</td><td>800</td></tr></table>
+      </div>
+      <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException
+	at stepDefinitions.AddToCartSteps.theUserAddsTheFollowingProductsToCart(AddToCartSteps.java:113)
+	at ✽.The user adds the following products to cart(file:///D:/DemoBlazeQA/DemoBlazeCucumber/src/test/resources/features/AddToCart.feature:83)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>hooks.Hooks.addscreenShot(io.cucumber.java.Scenario)</span>
+      <div>Verify the user can add multiple product to cart and total price is correct
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded8.png' src="../Screenshots/embedded8.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.AddToCartSteps.theCartShouldBeDisplayedAllTheProduct(io.cucumber.datatable.DataTable)">
+                <span>Then User navigates to Cart Page then Cart should be displayed all the product</span>
+      <div><table class='markup-table table '><tr><td>Product Name</td></tr><tr><td>Sony xperia z5</td></tr><tr><td>Samsung galaxy s7</td></tr></table>
+      </div>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.AddToCartSteps.theTotalPriceInTheCartShouldBeEqualToThe(java.lang.String)">
+                <span>And The total price in the cart should be equal to the "1120"</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="160"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">All Product on Home Page</p>
+            <p class="text-sm">
+              <span>3:32:18 PM</span> / <span>00:00:08:127</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">All Product on Home Page</h5>
+<span class='badge badge-success'>10.15.2025 3:32:18 PM</span>
+<span class='badge badge-danger'>10.15.2025 3:32:26 PM</span>
+<span class='badge badge-default'>00:00:08:127</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=160</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="161"><span class="badge log pass-bg mr-2">Pass</span>View product on Homepage</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.the_user_navigates_to_application_url_and_logo_is_displayed()">
+                <span>Given The user navigates to application URL and logo is displayed</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductSteps.count_the_number_of_products_displayed_on_homepage()">
+                <span>Then Count the number of products displayed on homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductSteps.display_all_the_product_names_on_the_homepage()">
+                <span>And Display all the product names on the homepage</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="170"><span class="badge log fail-bg mr-2">Fail</span>Click on product and verify the product detail page</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.the_user_navigates_to_application_url_and_logo_is_displayed()">
+                <span>Given The user navigates to application URL and logo is displayed</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductSteps.the_user_click_on_the_product(java.lang.String)">
+                <span>When The user click on the product "Sony xperia z5"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="stepDefinitions.ProductSteps.product_detail_page_should_be_displayed(java.lang.String)">
+                <span>Then Product detail page should be displayed "Sony xperia z5"</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException
+	at stepDefinitions.ProductSteps.product_detail_page_should_be_displayed(ProductSteps.java:40)
+	at ✽.Product detail page should be displayed "Sony xperia z5"(file:///D:/DemoBlazeQA/DemoBlazeCucumber/src/test/resources/features/AllProduct.feature:11)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>hooks.Hooks.addscreenShot(io.cucumber.java.Scenario)</span>
+      <div>Click on product and verify the product detail page
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded9.png' src="../Screenshots/embedded9.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="179"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Checkout flow Verification</p>
+            <p class="text-sm">
+              <span>3:32:26 PM</span> / <span>00:00:13:084</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Checkout flow Verification</h5>
+<span class='badge badge-success'>10.15.2025 3:32:26 PM</span>
+<span class='badge badge-danger'>10.15.2025 3:32:39 PM</span>
+<span class='badge badge-default'>00:00:13:084</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=179</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="180"><span class="badge log fail-bg mr-2">Fail</span>Verify use can check out Successfully from cart page</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.the_user_navigates_to_application_url_and_logo_is_displayed()">
+                <span>Given The user navigates to application URL and logo is displayed</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="stepDefinitions.AddToCartSteps.theUserAddsTheFollowingProductsToCart(io.cucumber.datatable.DataTable)">
+                <span>Given The user adds the following products to cart</span>
+      <div><table class='markup-table table '><tr><td>Product Name</td><td>Price</td></tr><tr><td>Sony xperia z5</td><td>320</td></tr><tr><td>Samsung galaxy s7</td><td>800</td></tr></table>
+      </div>
+      <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException
+	at stepDefinitions.AddToCartSteps.theUserAddsTheFollowingProductsToCart(AddToCartSteps.java:113)
+	at ✽.The user adds the following products to cart(file:///D:/DemoBlazeQA/DemoBlazeCucumber/src/test/resources/features/CheckOut.feature:8)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>hooks.Hooks.addscreenShot(io.cucumber.java.Scenario)</span>
+      <div>Verify use can check out Successfully from cart page
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded10.png' src="../Screenshots/embedded10.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.AddToCartSteps.theCartShouldBeDisplayedAllTheProduct(io.cucumber.datatable.DataTable)">
+                <span>When User navigates to Cart Page then Cart should be displayed all the product</span>
+      <div><table class='markup-table table '><tr><td>Product Name</td></tr><tr><td>Sony xperia z5</td></tr><tr><td>Samsung galaxy s7</td></tr></table>
+      </div>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.AddToCartSteps.theUserClickOnThePlaceOrder()">
+                <span>And The user click on the Place order</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.CheckoutSteps.userTheUserFillOutsTheCheckoutDetails(io.cucumber.datatable.DataTable)">
+                <span>And User the user fill outs the checkout details</span>
+      <div><table class='markup-table table '><tr><td>Name</td><td>John Doe</td></tr><tr><td>Country</td><td>USA</td></tr><tr><td>City</td><td>New York</td></tr><tr><td>Credit Card</td><td>1234 5678 9012 3456</td></tr><tr><td>Month</td><td>12</td></tr><tr><td>Year</td><td>2025</td></tr></table>
+      </div>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.AddToCartSteps.userConfirmsThePurchase()">
+                <span>And User confirms the purchase</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.CheckoutSteps.aConfirmationMessageShouldBeDisplayed(java.lang.String)">
+                <span>Then A Confirmation message "Thank you for your purchase!" should be displayed</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.CheckoutSteps.theOrderDetailsShouldInclude(io.cucumber.datatable.DataTable)">
+                <span>And The Order details should include</span>
+      <div><table class='markup-table table '><tr><td>Amount</td><td>1120 USD</td></tr><tr><td>Card Number</td><td>1234 5678 9012 3456</td></tr><tr><td>Name</td><td>John Doe</td></tr><tr><td>Date</td><td>14/9/2025</td></tr></table>
+      </div>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.CheckoutSteps.clickingOnOkButtonThenUserShouldBeNavigatedToHomePageAndTitleShouldBe(java.lang.String)">
+                <span>And Clicking on ok button then user should be navigated to Home Page and title should be "PRODUCT STORE"</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="201"><span class="badge log fail-bg mr-2">Fail</span>Verify when user does not enter any value then alert appears of enter details</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.the_user_navigates_to_application_url_and_logo_is_displayed()">
+                <span>Given The user navigates to application URL and logo is displayed</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductSteps.the_user_click_on_the_product(java.lang.String)">
+                <span>When The user click on the product "Sony xperia z5"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="stepDefinitions.ProductSteps.product_detail_page_should_be_displayed(java.lang.String)">
+                <span>And Product detail page should be displayed "Sony xperia z5"</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException
+	at stepDefinitions.ProductSteps.product_detail_page_should_be_displayed(ProductSteps.java:40)
+	at ✽.Product detail page should be displayed "Sony xperia z5"(file:///D:/DemoBlazeQA/DemoBlazeCucumber/src/test/resources/features/CheckOut.feature:36)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>hooks.Hooks.addscreenShot(io.cucumber.java.Scenario)</span>
+      <div>Verify when user does not enter any value then alert appears of enter details
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded11.png' src="../Screenshots/embedded11.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.AddToCartSteps.click_on_the_add_to_cart_button()">
+                <span>And Click on the add to cart button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.AddToCartSteps.successMessageShouldBeDisplayedOnThePage(java.lang.String)">
+                <span>And Success message should be displayed on the page "Product added"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.AddToCartSteps.theProductShouldBeSuccessfullyAddedToTheCart(java.lang.String)">
+                <span>And The product "Sony xperia z5" should be successfully added to the cart</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.AddToCartSteps.theUserClickOnThePlaceOrder()">
+                <span>And The user click on the Place order</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.AddToCartSteps.userConfirmsThePurchase()">
+                <span>And User confirms the purchase</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.CheckoutSteps.alertShouldBeDisplayedWithMessage(java.lang.String)">
+                <span>Then Alert should be displayed with message "Please fill out Name and Creditcard."</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="222"><span class="badge log fail-bg mr-2">Fail</span>Verify the on the order the close button works</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.the_user_navigates_to_application_url_and_logo_is_displayed()">
+                <span>Given The user navigates to application URL and logo is displayed</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductSteps.the_user_click_on_the_product(java.lang.String)">
+                <span>When The user click on the product "Sony xperia z5"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="stepDefinitions.ProductSteps.product_detail_page_should_be_displayed(java.lang.String)">
+                <span>And Product detail page should be displayed "Sony xperia z5"</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException
+	at stepDefinitions.ProductSteps.product_detail_page_should_be_displayed(ProductSteps.java:40)
+	at ✽.Product detail page should be displayed "Sony xperia z5"(file:///D:/DemoBlazeQA/DemoBlazeCucumber/src/test/resources/features/CheckOut.feature:47)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>hooks.Hooks.addscreenShot(io.cucumber.java.Scenario)</span>
+      <div>Verify the on the order the close button works
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded12.png' src="../Screenshots/embedded12.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.AddToCartSteps.click_on_the_add_to_cart_button()">
+                <span>And Click on the add to cart button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.AddToCartSteps.successMessageShouldBeDisplayedOnThePage(java.lang.String)">
+                <span>And Success message should be displayed on the page "Product added"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.AddToCartSteps.theProductShouldBeSuccessfullyAddedToTheCart(java.lang.String)">
+                <span>And The product "Sony xperia z5" should be successfully added to the cart</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.AddToCartSteps.theUserClickOnThePlaceOrder()">
+                <span>And The user click on the Place order</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.CheckoutSteps.userClicksOnCloseButtonThenModalShouldBeClosed()">
+                <span>Then User clicks on close button then modal should be closed</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="241"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Login Functionality</p>
+            <p class="text-sm">
+              <span>3:32:39 PM</span> / <span>00:00:32:687</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Login Functionality</h5>
+<span class='badge badge-success'>10.15.2025 3:32:39 PM</span>
+<span class='badge badge-danger'>10.15.2025 3:33:12 PM</span>
+<span class='badge badge-default'>00:00:32:687</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=241</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="242"><span class="badge log pass-bg mr-2">Pass</span>Successful Login with valid credentials</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.the_user_navigates_to_application_url_and_logo_is_displayed()">
+                <span>Given The user navigates to application URL and logo is displayed</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.the_user_click_on_login_from_navbar()">
+                <span>And The user click on Login from Navbar</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.the_user_enter_valid_user_name_as_and_password_as(java.lang.String,java.lang.String)">
+                <span>When The user enter valid User name as "David02" and Password as "David@123" in the modal</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.the_user_clicks_on_login_button()">
+                <span>And The user clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.the_user_should_be_successfully_logged_in_and_the_username_displayed_webpage()">
+                <span>Then The User should be successfully logged in and the username displayed webpage</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="255"><span class="badge log pass-bg mr-2">Pass</span>Log in with invalid credentials</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.the_user_navigates_to_application_url_and_logo_is_displayed()">
+                <span>Given The user navigates to application URL and logo is displayed</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.the_user_click_on_login_from_navbar()">
+                <span>And The user click on Login from Navbar</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.the_user_enter_valid_user_name_as_and_password_as(java.lang.String,java.lang.String)">
+                <span>When The user enter valid User name as "tyrq1231" and Password as "123456" in the modal</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.the_user_clicks_on_login_button()">
+                <span>And The user clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.anAlertShouldBeDisplayedWithMessage(java.lang.String)">
+                <span>Then An Alert should be displayed with message "User does not exist."</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="268"><span class="badge log pass-bg mr-2">Pass</span>Log in with invalid credentials</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="269"><span class="badge log pass-bg mr-2">Pass</span>Log in with invalid credentials</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given The user navigates to application URL and logo is displayed</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And The user click on Login from Navbar</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When The user enter valid User name as "Wrong123" and Password as "David@123" in the modal</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And The user clicks on login button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then An Alert should be displayed with message "User does not exist."</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="282"><span class="badge log pass-bg mr-2">Pass</span>Log in with invalid credentials</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given The user navigates to application URL and logo is displayed</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And The user click on Login from Navbar</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When The user enter valid User name as "David02" and Password as "7789955" in the modal</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And The user clicks on login button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then An Alert should be displayed with message "Wrong password."</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="295"><span class="badge log pass-bg mr-2">Pass</span>Log in with invalid credentials</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given The user navigates to application URL and logo is displayed</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And The user click on Login from Navbar</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When The user enter valid User name as "" and Password as "" in the modal</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And The user clicks on login button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then An Alert should be displayed with message "Please fill out Username and Password."</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="308"><span class="badge log pass-bg mr-2">Pass</span>Verify Logout after login</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.the_user_navigates_to_application_url_and_logo_is_displayed()">
+                <span>Given The user navigates to application URL and logo is displayed</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.the_user_click_on_login_from_navbar()">
+                <span>And The user click on Login from Navbar</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.theUserLoogedInWithValidUserNameAsAndPasswordAsInTheModal(java.lang.String,java.lang.String)">
+                <span>Given The user loged in with valid User name as "David02" and Password as "David@123" in the input</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.theUserClicksOnLogoutButton()">
+                <span>When The user clicks on logout button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.loginLinkShouldBeVisibleOnTheHomepage()">
+                <span>Then Login link should be visible on the Homepage</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>12</span>
+</span>
+<p class="name">java.lang.NullPointerException</p>
+<p class="duration text-sm">12 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>java.lang.NullPointerException</h4>
+<span status="fail" class='badge log badge-danger'>12 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:31:34 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='8'>And Product detail page should be displayed "Sony xperia z5"</a>
+<div class="">
+<span class="badge badge-default">Add to Cart functionality.Verify Product added to cart Successfully without login.And Product detail page should be displayed "Sony xperia z5"</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:31:50 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='44'>And Product detail page should be displayed "Sony xperia z5"</a>
+<div class="">
+<span class="badge badge-default">Add to Cart functionality.Verify product name and price are displayed correctly on cart page for single product.And Product detail page should be displayed "Sony xperia z5"</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:31:55 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='62'>And Product detail page should be displayed "Sony xperia z5"</a>
+<div class="">
+<span class="badge badge-default">Add to Cart functionality.Verify the product details and price in the cart for multiple products.And Product detail page should be displayed "Sony xperia z5"</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:32:00 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='79'>And Product detail page should be displayed "Samsung galaxy s7"</a>
+<div class="">
+<span class="badge badge-default">Add to Cart functionality.Verify the product details and price in the cart for multiple products.And Product detail page should be displayed "Samsung galaxy s7"</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:32:04 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='96'>And Product detail page should be displayed "Sony xperia z5"</a>
+<div class="">
+<span class="badge badge-default">Add to Cart functionality.Verify Total price for single product is same as product price.And Product detail page should be displayed "Sony xperia z5"</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:32:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='113'>And Product detail page should be displayed "Sony xperia z5"</a>
+<div class="">
+<span class="badge badge-default">Add to Cart functionality.Verify user can remove single product from the cart.And Product detail page should be displayed "Sony xperia z5"</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:32:14 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='128'>And Product detail page should be displayed "Samsung galaxy s7"</a>
+<div class="">
+<span class="badge badge-default">Add to Cart functionality.Verify the user can add multiple product to cart and Total price is updated.And Product detail page should be displayed "Samsung galaxy s7"</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:32:18 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='153'>When The user adds the following products to cart</a>
+<div class="">
+<span class="badge badge-default">Add to Cart functionality.Verify the user can add multiple product to cart and total price is correct.When The user adds the following products to cart</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:32:26 PM</td>
+<td>
+<a href="#" class="linked" test-id='160' id='176'>Then Product detail page should be displayed "Sony xperia z5"</a>
+<div class="">
+<span class="badge badge-default">All Product on Home Page.Click on product and verify the product detail page.Then Product detail page should be displayed "Sony xperia z5"</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:32:30 PM</td>
+<td>
+<a href="#" class="linked" test-id='179' id='184'>Given The user adds the following products to cart</a>
+<div class="">
+<span class="badge badge-default">Checkout flow Verification.Verify use can check out Successfully from cart page.Given The user adds the following products to cart</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:32:34 PM</td>
+<td>
+<a href="#" class="linked" test-id='179' id='207'>And Product detail page should be displayed "Sony xperia z5"</a>
+<div class="">
+<span class="badge badge-default">Checkout flow Verification.Verify when user does not enter any value then alert appears of enter details.And Product detail page should be displayed "Sony xperia z5"</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:32:39 PM</td>
+<td>
+<a href="#" class="linked" test-id='179' id='228'>And Product detail page should be displayed "Sony xperia z5"</a>
+<div class="">
+<span class="badge badge-default">Checkout flow Verification.Verify the on the order the close button works.And Product detail page should be displayed "Sony xperia z5"</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">4</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>3</span>
+</span>
+<p class="name">@Negative</p>
+<p class="duration text-sm">3 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Negative</h4>
+<span status="pass" class='badge log pass-bg'>3 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:32:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='241' id='269'>Log in with invalid credentials</a>
+<div class="">
+<span class="badge badge-default">Login Functionality.Log in with invalid credentials</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:32:56 PM</td>
+<td>
+<a href="#" class="linked" test-id='241' id='282'>Log in with invalid credentials</a>
+<div class="">
+<span class="badge badge-default">Login Functionality.Log in with invalid credentials</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:33:00 PM</td>
+<td>
+<a href="#" class="linked" test-id='241' id='295'>Log in with invalid credentials</a>
+<div class="">
+<span class="badge badge-default">Login Functionality.Log in with invalid credentials</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+<span class='badge log badge-danger'>3</span>
+</span>
+<p class="name">@Smoke</p>
+<p class="duration text-sm">5 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Smoke</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+<span status="fail" class='badge log badge-danger'>3 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:31:29 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Verify Product added to cart Successfully without login</a>
+<div class="">
+<span class="badge badge-default">Add to Cart functionality.Verify Product added to cart Successfully without login</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:31:35 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='17'>Verify product can be added after successfully login</a>
+<div class="">
+<span class="badge badge-default">Add to Cart functionality.Verify product can be added after successfully login</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:32:05 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='107'>Verify user can remove single product from the cart</a>
+<div class="">
+<span class="badge badge-default">Add to Cart functionality.Verify user can remove single product from the cart</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:32:10 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='122'>Verify the user can add multiple product to cart and Total price is updated</a>
+<div class="">
+<span class="badge badge-default">Add to Cart functionality.Verify the user can add multiple product to cart and Total price is updated</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:32:39 PM</td>
+<td>
+<a href="#" class="linked" test-id='241' id='242'>Successful Login with valid credentials</a>
+<div class="">
+<span class="badge badge-default">Login Functionality.Successful Login with valid credentials</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+<span class='badge log badge-danger'>6</span>
+</span>
+<p class="name">@Regression</p>
+<p class="duration text-sm">7 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Regression</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+<span status="fail" class='badge log badge-danger'>6 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:31:46 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='38'>Verify product name and price are displayed correctly on cart page for single product</a>
+<div class="">
+<span class="badge badge-default">Add to Cart functionality.Verify product name and price are displayed correctly on cart page for single product</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:31:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='56'>Verify the product details and price in the cart for multiple products</a>
+<div class="">
+<span class="badge badge-default">Add to Cart functionality.Verify the product details and price in the cart for multiple products</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:31:55 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='73'>Verify the product details and price in the cart for multiple products</a>
+<div class="">
+<span class="badge badge-default">Add to Cart functionality.Verify the product details and price in the cart for multiple products</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:32:00 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='90'>Verify Total price for single product is same as product price</a>
+<div class="">
+<span class="badge badge-default">Add to Cart functionality.Verify Total price for single product is same as product price</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:32:30 PM</td>
+<td>
+<a href="#" class="linked" test-id='179' id='201'>Verify when user does not enter any value then alert appears of enter details</a>
+<div class="">
+<span class="badge badge-default">Checkout flow Verification.Verify when user does not enter any value then alert appears of enter details</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:32:35 PM</td>
+<td>
+<a href="#" class="linked" test-id='179' id='222'>Verify the on the order the close button works</a>
+<div class="">
+<span class="badge badge-default">Checkout flow Verification.Verify the on the order the close button works</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:32:46 PM</td>
+<td>
+<a href="#" class="linked" test-id='241' id='255'>Log in with invalid credentials</a>
+<div class="">
+<span class="badge badge-default">Login Functionality.Log in with invalid credentials</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+<span class='badge log badge-danger'>2</span>
+</span>
+<p class="name">@Sanity</p>
+<p class="duration text-sm">3 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Sanity</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:32:15 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='149'>Verify the user can add multiple product to cart and total price is correct</a>
+<div class="">
+<span class="badge badge-default">Add to Cart functionality.Verify the user can add multiple product to cart and total price is correct</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:32:26 PM</td>
+<td>
+<a href="#" class="linked" test-id='179' id='180'>Verify use can check out Successfully from cart page</a>
+<div class="">
+<span class="badge badge-default">Checkout flow Verification.Verify use can check out Successfully from cart page</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:33:04 PM</td>
+<td>
+<a href="#" class="linked" test-id='241' id='308'>Verify Logout after login</a>
+<div class="">
+<span class="badge badge-default">Login Functionality.Verify Logout after login</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Oct 15, 2025 03:31:28 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Oct 15, 2025 03:33:12 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>1</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>3</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='25%'>
+<b>1</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='75%'><b>3</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='40%'><b>8</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='60%'><b>12</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='54%'><b>76</b> steps passed</small></div>
+<div>
+<small data-tooltip='8%'><b>12</b> steps failed,
+<b>51</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"Add to Cart functionality":49.09,"All Product on Home Page":8.127,"Checkout flow Verification":13.084,"Login Functionality":32.687
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>@Negative</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@Smoke</td>
+<td>2</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>40%</td>
+</tr>
+<tr>
+<td>@Regression</td>
+<td>1</td>
+<td>6</td>
+<td>0</td>
+<td>0</td>
+<td>14.286%</td>
+</tr>
+<tr>
+<td>@Sanity</td>
+<td>1</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>33.333%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 1,
+failParent: 3,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 8,
+failChild: 12,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 76,
+failGrandChild: 12,
+warningGrandChild: 0,
+skipGrandChild: 51,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>

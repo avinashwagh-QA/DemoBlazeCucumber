@@ -14,17 +14,22 @@ import java.io.IOException;
 public class LoginSteps {
 
     private HomePage hp;
-    private final WebDriver driver;
+    private final DriverProvider driverProvider;  // Injected DI managed driver Provider
     private LoginPage lp;
 
     @Inject
-    public LoginSteps(DriverProvider provider) {
-        this.driver = provider.getDriver();   // same driver as Hooks
+    public LoginSteps(DriverProvider driverProvider) {
+        this.driverProvider = driverProvider;
+        hp = new HomePage(driverProvider);
+        lp = new LoginPage(driverProvider);
+
+
+
+        // same driver as Hooks
     }
 
     @Given("The user navigates to application URL and logo is displayed")
     public void the_user_navigates_to_application_url_and_logo_is_displayed() {
-        hp = new HomePage(driver);
         hp.pageLoadedLogoDisplayed();
     }
 
@@ -35,7 +40,6 @@ public class LoginSteps {
 
     @When("The user enter valid User name as {string} and Password as {string} in the modal")
     public void the_user_enter_valid_user_name_as_and_password_as(String username, String password) {
-        lp = new LoginPage(driver);
         lp.setTxtUserName(username);
         lp.setTxtPassword(password);
     }
@@ -61,7 +65,6 @@ public class LoginSteps {
 
     @Given("The user loged in with valid User name as {string} and Password as {string} in the input")
     public void theUserLoogedInWithValidUserNameAsAndPasswordAsInTheModal(String username, String password) throws InterruptedException {
-        lp = new LoginPage(driver);
         lp.loginWithValidCredential(username,password);
     }
 

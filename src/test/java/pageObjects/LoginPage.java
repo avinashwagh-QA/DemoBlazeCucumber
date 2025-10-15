@@ -2,16 +2,18 @@ package pageObjects;
 
 import factory.DriverProvider;
 import org.openqa.selenium.Alert;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class LoginPage extends BasePage {
 
-    public LoginPage(WebDriver driver) {
-        super(driver);
-    }
 
+    private DriverProvider driverProvider;
+
+    public LoginPage(DriverProvider driverProvider) {
+        super(driverProvider);
+        this.driverProvider = driverProvider;
+    }
 
     //Element for UserName
     @FindBy(xpath = "//input[@id='loginusername']")
@@ -39,28 +41,25 @@ public class LoginPage extends BasePage {
         btnLogin.click();
     }
 
-    public boolean loginDisplayed(){
+    public boolean loginDisplayed() {
         return btnLogin.isDisplayed();
     }
 
     public String getMessageFromAlert() {
-        waitHelper.waitForAlerttoBePresent();
+        waitHelper.waitForAlertToBePresent();
         Alert alert = driver.switchTo().alert();
         String alertTxt = alert.getText();
         alert.accept();
         return alertTxt;
     }
 
-    public void loginWithValidCredential (String username, String password) throws InterruptedException {
-        HomePage hmp= new HomePage(driver);
+    public void loginWithValidCredential(String username, String password) throws InterruptedException {
+        HomePage hmp = new HomePage(driverProvider);
         hmp.openLoginModal();
         Thread.sleep(5000);
         setTxtUserName(username);
         setTxtPassword(password);
         clickOnLoginBtn();
     }
-
-
-
 
 }

@@ -19,5 +19,8 @@ public class DriverProvider {
         BaseClass.setDriver(driver);      // store in ThreadLocal
     }
 
+    public WebDriver getDriver() {
+        return driver;
+    }
 }
 

@@ -1,14 +1,14 @@
 package pageObjects;
 
 import factory.BaseClass;
+import factory.DriverProvider;
 import org.openqa.selenium.Alert;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class ProductPage extends BasePage{
-    public ProductPage(WebDriver driver) {
-        super(driver);
+public class ProductPage extends BasePage {
+    public ProductPage(DriverProvider driverProvider) {
+        super(driverProvider);
     }
 
     // Element for product name
@@ -24,30 +24,29 @@ public class ProductPage extends BasePage{
     WebElement lnkHome;
 
     // Method for to get product name
-    public String getProductLabel ()
-    {
+    public String getProductLabel() {
         waitHelper.waitForElementVisible(productNameLabel);
         return productNameLabel.getText();
     }
 
     // Method for add to cart button
-    public void clickOnAddToCart (){
+    public void clickOnAddToCart() {
         waitHelper.waitForElementVisible(btnAddToCart);
         waitHelper.waitForElementTOClick(btnAddToCart);
         btnAddToCart.click();
     }
 
     // To verify Product added from product page
-    public String productCartSuccessMsg (){
+    public String productCartSuccessMsg() {
         try {
-            waitHelper.waitForAlerttoBePresent();
+            waitHelper.waitForAlertToBePresent();
             Alert alert = driver.switchTo().alert();
             String alertTXT = alert.getText();
             alert.accept();
             BaseClass.getLogger().info("Alert found...");
             return alertTXT;
 
-        } catch (Exception e){
+        } catch (Exception e) {
 
             BaseClass.getLogger().info("Alert not found{}", e.getMessage());
             return null;
@@ -56,10 +55,8 @@ public class ProductPage extends BasePage{
     }
 
     // Navigate to Home
-    public void navigateToHome(){
+    public void navigateToHome() {
         lnkHome.click();
     }
 
-
-    
 }
