@@ -4,7 +4,6 @@ import factory.BaseClass;
 import factory.DriverProvider;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -86,7 +85,7 @@ public class CheckoutPage extends BasePage{
     }
 
     public void clickOnPurchase(){
-        waitHelper.waitForElementTOClick(btnPurchase);
+        waitHelper.waitForElementToBeClick(btnPurchase);
         btnPurchase.click();
     }
 
@@ -120,7 +119,7 @@ public class CheckoutPage extends BasePage{
 
     public String clickOnOkButtton (){
         waitHelper.waitForElementVisible(btnOk);
-        waitHelper.waitForElementTOClick(btnOk);
+        waitHelper.waitForElementToBeClick(btnOk);
 
         waitHelper.waitForElementVisible(pageTittle);
         return pageTittle.getText();
@@ -137,7 +136,7 @@ public class CheckoutPage extends BasePage{
 
     public boolean closePurchaseModal(){
         waitHelper.waitForElementVisible(btnCloseModal);
-        waitHelper.waitForElementTOClick(btnCloseModal);
+        waitHelper.waitForElementToBeClick(btnCloseModal);
         btnCloseModal.click();
 
         try {

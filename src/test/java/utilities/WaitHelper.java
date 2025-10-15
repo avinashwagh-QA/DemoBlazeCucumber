@@ -39,7 +39,7 @@ public class WaitHelper {
     }
 
     /* Method for element to be clickable */
-    public WebElement waitForElementTOClick(WebElement element) {
+    public WebElement waitForElementToBeClick(WebElement element) {
         try {
             return wait.until(ExpectedConditions.elementToBeClickable(element));
         } catch (Exception e) {

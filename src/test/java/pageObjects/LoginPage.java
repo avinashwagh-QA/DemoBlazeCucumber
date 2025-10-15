@@ -28,12 +28,12 @@ public class LoginPage extends BasePage {
 
     //Methods for set Username and Password
     public void setTxtUserName(String userName) {
-        waitHelper.waitForElementTOClick(txtUserName);
+        waitHelper.waitForElementToBeClick(txtUserName);
         txtUserName.sendKeys(userName);
     }
 
     public void setTxtPassword(String password) {
-        waitHelper.waitForElementTOClick(txtPassword);
+        waitHelper.waitForElementToBeClick(txtPassword);
         txtPassword.sendKeys(password);
     }
 

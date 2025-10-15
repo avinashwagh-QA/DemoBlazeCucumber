@@ -8,8 +8,9 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = {"src/test/resources/features"},
+        //features = {"src/test/resources/features"},
         //features= {"src/test/resources/features/login.feature"},
+        features= {"src/test/resources/features/signup.feature"},
         //features = {"src/test/resources/features/AllProduct.feature"},
         //features = {"src/test/resources/features/AddToCart.feature"},
         //features = {"src/test/resources/features/CheckOut.feature"},

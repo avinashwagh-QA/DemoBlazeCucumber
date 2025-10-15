@@ -47,7 +47,7 @@ public class HomePage extends BasePage {
             return; // do not click navbar link
         }
         if (linkLogin != null) {
-            waitHelper.waitForElementTOClick(linkLogin);
+            waitHelper.waitForElementToBeClick(linkLogin);
             linkLogin.click();
             waitHelper.waitForElementVisible(loginModal);
         } else {
@@ -87,7 +87,7 @@ public class HomePage extends BasePage {
 
         for (WebElement product : productTitle) {
             if (product.getText().equalsIgnoreCase(productName)) {
-                waitHelper.waitForElementTOClick(product);
+                waitHelper.waitForElementToBeClick(product);
                 product.click();
                 found = true;
                 break;

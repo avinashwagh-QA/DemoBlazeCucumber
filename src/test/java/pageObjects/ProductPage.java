@@ -32,7 +32,7 @@ public class ProductPage extends BasePage {
     // Method for add to cart button
     public void clickOnAddToCart() {
         waitHelper.waitForElementVisible(btnAddToCart);
-        waitHelper.waitForElementTOClick(btnAddToCart);
+        waitHelper.waitForElementToBeClick(btnAddToCart);
         btnAddToCart.click();
     }
 

@@ -33,7 +33,7 @@ public class CartPage extends BasePage {
 
     public void clickOnCartPage() {
         waitHelper.waitForElementVisible(lnkCart);
-        waitHelper.waitForElementTOClick(lnkCart);
+        waitHelper.waitForElementToBeClick(lnkCart);
         lnkCart.click();
     }
 
@@ -205,7 +205,7 @@ public class CartPage extends BasePage {
     }
 
     public void clickOnPlaceOrder(){
-        waitHelper.waitForElementTOClick(btnPlaceOrder);
+        waitHelper.waitForElementToBeClick(btnPlaceOrder);
         btnPlaceOrder.click();
     }
 

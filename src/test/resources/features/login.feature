@@ -1,4 +1,4 @@
-Feature: Login Functionality
+Feature: Login and Logout Functionality
 
   Background:
     Given The user navigates to application URL and logo is displayed
