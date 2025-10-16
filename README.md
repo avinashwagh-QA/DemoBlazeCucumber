@@ -102,29 +102,26 @@ The framework follows a **Page Object Model (POM)** design pattern integrated wi
 ## 📁 Folder Structure
 
 ```
-DemoBlazeCucumber/
+DemoBlazeAutomation
 │
 ├── src
-│   ├── main
-│   │   └── java
-│   │       ├── factory/             # BaseClass, Driver setup, Config
-│   │       ├── utilities/           # WaitHelper, Screenshot, ConfigReader, etc.
-│   │       └── pageObjects/         # Page Object classes
-│   │
 │   └── test
 │       ├── java
-│       │   └── stepDefinitions/     # Step definitions mapped to feature steps
-│       │   └── hooks/               # Hooks for setup/teardown
+│       │   ├── factory          # BaseClass, Driver Provider (Singleton)
+│       │   ├── hooks            # Setup & Teardown (Cucumber Hooks)
+│       │   ├── pageObjects      # All Page Object classes
+│       │   ├── stepDefinitions  # Cucumber step definitions
+│       │   ├── testRunner       # Cucumber test runner class
+│       │   └── utilities        # WaitHelper and other reusable helpers
+│       │
 │       └── resources
-│           ├── features/            # Feature files in Gherkin format
-│           ├── config.properties    # Environment config
-│           └── log4j.properties     # Logging configuration
+│           ├── features          # Cucumber feature files
+│           ├── config.properties # Application configuration (URL, browser, etc.)
+│           ├── extent.properties # Extent report configuration
+│           └── log4j.xml         # Logging configuration
 │
-├── reports/                         # Extent HTML Reports
-├── screenshots/                     # Captured screenshots
-├── pom.xml                          # Maven dependencies
-└── README.md                        # Project documentation
-```
+└── test-output                  # Generated Extent Report, Screenshots, Logs
+
 
 ---
 
