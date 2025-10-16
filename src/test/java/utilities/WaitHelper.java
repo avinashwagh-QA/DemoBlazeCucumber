@@ -62,9 +62,9 @@ public class WaitHelper {
         }
     }
 
-    public void waitForPageToBeLoad(){
+    public void waitForPageToBeLoad() {
         wait.until(webDriver -> ((JavascriptExecutor) driver)
-                .executeScript("Return document.ready state").equals("complete"));
+                .executeScript("return document.readyState").equals("complete"));
     }
 
 
