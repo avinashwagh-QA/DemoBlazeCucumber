@@ -124,29 +124,29 @@ DemoBlazeAutomation
 
 
 ---
-
-## 🧪 Test Scenarios Covered
-
-### 🔐 **Login & Logout**
+---
+ 🧪 Test Scenarios Covered
+---
+ 🔐 **Login & Logout**
 
 * Successful login with valid credentials
 * Invalid credentials alert verification
 * Empty input alert validation
 * Logout after login verification
 
-### 🧍‍♂️ **Signup**
+ 🧍‍♂️ **Signup**
 
 * Successful signup
 * Signup with existing user
 * Empty field validation
 * Scenario Outline with multiple users
 
-### 🛒 **Product Listing & Details**
+ 🛒 **Product Listing & Details**
 
 * Verify product count on homepage
 * Validate product detail page navigation
 
-### 🧰 **Add to Cart**
+🧰 **Add to Cart**
 
 * Add product without login
 * Add product after login
@@ -155,7 +155,7 @@ DemoBlazeAutomation
 * Remove product from cart
 * Multiple product addition
 
-### 💳 **Checkout Flow**
+ 💳 **Checkout Flow**
 
 * Successful checkout with valid details
 * Alert validation when fields are empty
@@ -163,21 +163,21 @@ DemoBlazeAutomation
 
 ---
 
-## 🏃‍♂️ How to Run Tests
+🏃‍♂️ How to Run Tests
 
-### 🧩 Run from Maven Command Line
+🧩 Run from Maven Command Line
 
 ```bash
 mvn test
 ```
 
-### ▶️ Run with Specific Tag
+▶️ Run with Specific Tag
 
 ```bash
 mvn test -Dcucumber.filter.tags="@Smoke"
 ```
 
-### 🌐 Run with Specific Browser
+ 🌐 Run with Specific Browser
 
 ```bash
 mvn test -Dbrowser=chrome
@@ -185,7 +185,7 @@ mvn test -Dbrowser=chrome
 
 ---
 
-## 📊 Reporting
+ 📊 Reporting
 
 * Reports are automatically generated after each run.
 * Default location:
@@ -201,7 +201,7 @@ mvn test -Dbrowser=chrome
 
 ---
 
-## 🧰 Utilities and Helpers
+ 🧰 Utilities and Helpers
 
 | Utility               | Purpose                                                |
 | --------------------- | ------------------------------------------------------ |
